@@ -1,0 +1,4 @@
+docker build -t pgcli .
+docker run  --rm --name pgcli \
+             -v $(pwd)/../postgres/data/socket/:/var/run/postgresql/ \
+            -it pgcli postgres://postgres:test@/test
